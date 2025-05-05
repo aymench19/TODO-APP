@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionnaire de Tâches</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestionnaire de Tâches</h1>
+        
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Nouvelle tâche..." required>
+            <input type="date" id="task-date">
+            <select id="task-priority">
+                <option value="low">Faible</option>
+                <option value="medium" selected>Normale</option>
+                <option value="high">Haute</option>
+            </select>
+            <button type="submit">Ajouter</button>
+        </form>
+
+        <div class="controls">
+            <input type="text" id="search-input" placeholder="Rechercher des tâches...">
+            <div class="sort-options">
+                <label>Trier par:</label>
+                <select id="sort-by">
+                    <option value="date">Date</option>
+                    <option value="priority">Priorité</option>
+                    <option value="text">Texte</option>
+                    <option value="completed">Statut</option>
+                </select>
+                <select id="sort-order">
+                    <option value="asc">Croissant</option>
+                    <option value="desc">Décroissant</option>
+                </select>
+            </div>
+        </div>
+
+        <ul id="task-list"></ul>
+
+        <div class="dashboard">
+            <div class="stats-card">
+                <h3>Statistiques</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value" id="total-tasks">0</div>
+                        <div class="stat-label">Total</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value completed-stat" id="completed-tasks">0</div>
+                        <div class="stat-label">Complétées</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value incomplete-stat" id="incomplete-tasks">0</div>
+                        <div class="stat-label">Incomplètes</div>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="completion-bar"></div>
+                </div>
+                <div class="priority-stats">
+                    <h4>Répartition par priorité</h4>
+                    <div class="priority-bar high-priority-bar">
+                        <span>Haute</span>
+                        <div class="bar-fill" id="high-priority-fill"></div>
+                    </div>
+                    <div class="priority-bar medium-priority-bar">
+                        <span>Normale</span>
+                        <div class="bar-fill" id="medium-priority-fill"></div>
+                    </div>
+                    <div class="priority-bar low-priority-bar">
+                        <span>Faible</span>
+                        <div class="bar-fill" id="low-priority-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="js/storage.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

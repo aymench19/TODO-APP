@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestionnaire de Tâches</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
@@ -60,25 +61,25 @@
                 <div class="progress-container">
                     <div class="progress-bar" id="completion-bar"></div>
                 </div>
-                <div class="priority-stats">
-                    <h4>Répartition par priorité</h4>
-                    <div class="priority-bar high-priority-bar">
-                        <span>Haute</span>
-                        <div class="bar-fill" id="high-priority-fill"></div>
+                
+                <div class="chart-container">
+                    <div class="chart-card">
+                        <h4>Répartition par Priorité</h4>
+                        <canvas id="priority-chart"></canvas>
                     </div>
-                    <div class="priority-bar medium-priority-bar">
-                        <span>Normale</span>
-                        <div class="bar-fill" id="medium-priority-fill"></div>
-                    </div>
-                    <div class="priority-bar low-priority-bar">
-                        <span>Faible</span>
-                        <div class="bar-fill" id="low-priority-fill"></div>
+                    <div class="chart-card">
+                        <h4>Statut des Tâches</h4>
+                        <canvas id="status-chart"></canvas>
                     </div>
                 </div>
             </div>
         </div>
+        <footer class="app-footer">
+            <div class="footer-content">
+                <p>Réalisé par : Chairat Aymen - Tous droits réservés © 2025 </p>
+            </div>
+        </footer>
     </div>
-    
 
     <script src="js/storage.js"></script>
     <script src="js/main.js"></script>

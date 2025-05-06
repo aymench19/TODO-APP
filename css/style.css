@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     background: white;
     padding: 20px;
@@ -183,8 +183,10 @@ h1 {
     color: #666;
     padding: 20px;
 }
+
 /* Dashboard Styles */
 .dashboard {
+    margin-top: 30px;
     margin-bottom: 25px;
     background: white;
     padding: 15px;
@@ -248,64 +250,65 @@ h1 {
     transition: width 0.5s ease;
 }
 
-.priority-stats {
+/* Styles pour les graphiques */
+.chart-container {
+    display: flex;
+    gap: 20px;
     margin-top: 20px;
 }
 
-.priority-stats h4 {
-    margin-bottom: 10px;
-    font-size: 14px;
+.chart-card {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.chart-card h4 {
+    margin-top: 0;
+    text-align: center;
     color: #555;
+    margin-bottom: 10px;
 }
 
-.priority-bar {
+canvas {
+    width: 100% !important;
+    height: 200px !important;
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        flex-direction: column;
+    }
+    
+    #task-form {
+        flex-direction: column;
+    }
+}
+/* Styles pour le footer */
+.app-footer {
+    background-color: #848383;
+    color: white;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-radius: 0 0 8px 8px;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-left:  180px;
+    padding: 0 20px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 8px;
 }
 
-.priority-bar span {
-    width: 60px;
-    font-size: 12px;
-}
 
-.bar-fill {
-    height: 8px;
-    border-radius: 4px;
-    flex-grow: 1;
-    background: #e0e0e0;
-    overflow: hidden;
-}
-
-.high-priority-bar .bar-fill {
-    background-color: #d9534f30;
-}
-
-.medium-priority-bar .bar-fill {
-    background-color: #f0ad4e30;
-}
-
-.low-priority-bar .bar-fill {
-    background-color: #5bc0de30;
-}
-
-.high-priority-bar .bar-fill::after {
-    content: '';
-    display: block;
-    height: 100%;
-    background-color: #d9534f;
-}
-
-.medium-priority-bar .bar-fill::after {
-    content: '';
-    display: block;
-    height: 100%;
-    background-color: #f0ad4e;
-}
-
-.low-priority-bar .bar-fill::after {
-    content: '';
-    display: block;
-    height: 100%;
-    background-color: #5bc0de;
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
 }

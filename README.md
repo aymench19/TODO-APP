@@ -1,35 +1,55 @@
-# Gestionnaire de Tâches (To-Do List)
-## Fonctionnalités
+# Gestionnaire de Tâches
+TODO-APP
+## Description
+Application web de gestion de tâches avec tableau de bord statistique et visualisation des données.
 
-### Gestion des tâches
-- Ajout de nouvelles tâches avec texte, date et priorité
-- Marquage des tâches comme complètes/incomplètes
-- Suppression des tâches
-- Sauvegarde automatique dans le localStorage
+## Fonctionnalités principales
+- Création de tâches avec texte, date et niveau de priorité
+- Marquage des tâches comme terminées
+- Suppression de tâches avec confirmation
+- Système de recherche et filtrage
+- Tableau de bord avec statistiques visuelles
+- Tri des tâches par différents critères
+- Sauvegarde locale dans le navigateur
+- Interface adaptée aux mobiles
 
-### Dashboard de statistiques
-- Vue d'ensemble des tâches (total, complétées, incomplètes)
-- Barre de progression globale
-- Répartition par priorité (haute, normale, faible)
-
-### Fonctionnalités avancées
-- Recherche en temps réel
-- Tri multiple (par date, priorité, texte, statut)
-- Interface colorée selon les priorités
-
-## Technologies utilisées
-
+## Technologies
 - HTML5
 - CSS3 (Flexbox, Grid)
-- JavaScript Vanilla
-- localStorage pour la persistance des données
+- JavaScript natif
+- Chart.js pour les graphiques
+- LocalStorage pour le stockage
 
-## Structure des fichiers
-todo-app/
-├── index.html # Page principale
+## Installation
+1. Téléchargez les fichiers du projet
+2. Ouvrez `index.html` dans votre navigateur web
+
+Aucune installation supplémentaire n'est requise.
+
+## Structure du projet
+├── index.html
 ├── css/
-│ └── style.css # Feuille de style
+│ └── style.css
 ├── js/
-│ ├── main.js # Logique principale
-│ └── storage.js # Gestion du localStorage
-└── README.md # Documentation
+│ ├── main.js
+│ └── storage.js
+└── README.md
+
+## Utilisation
+1. Ajoutez une tâche via le formulaire
+2. Cliquez sur la case pour marquer une tâche comme terminée
+3. Utilisez les boutons de suppression pour supprimer des tâches
+4. Consultez les statistiques dans le tableau de bord
+
+## Personnalisation
+Modifiez le fichier `style.css` pour changer :
+- Les couleurs principales
+- Les tailles des éléments
+- La disposition générale
+
+## Aperçu
+![Interface de l'application](/images/screenshot.png)
+
+
+## Auteur
+Chairat Aymen - aymen.chairat@sesame.com.tn

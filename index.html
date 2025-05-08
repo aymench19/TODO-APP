@@ -10,6 +10,10 @@
 <body>
     <div class="container">
         <h1>Gestionnaire de Tâches</h1>
+        <button class="theme-toggle" id="theme-toggle">
+            <span class="icon">🌙</span>
+            <span class="text">Mode sombre</span>
+        </button>
         
         <form id="task-form">
             <input type="text" id="task-input" placeholder="Nouvelle tâche..." required>
@@ -76,15 +80,16 @@
         </div>
         <footer class="app-footer">
             <div class="footer-content">
-                <p>Réalisé par : Chairat Aymen - Tous droits réservés © 2025 </p>
+                <p>Réalisé par : Chairat Aymen - Tous droits réservés © 2025</p>
             </div>
         </footer>
     </div>
 
     <script src="js/storage.js"></script>
-<script src="js/taskRenderer.js"></script>
-<script src="js/dashboard.js"></script>
-<script src="js/taskManager.js"></script>
-<script src="js/main.js"></script>
+    <script src="js/themeManager.js"></script>
+    <script src="js/taskRenderer.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/taskManager.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

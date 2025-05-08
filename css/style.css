@@ -1,25 +1,61 @@
+/* ========== Variables CSS ========== */
+:root {
+  /* Mode clair (défaut) */
+  --bg-color: #f5f5f5;
+  --container-bg: white;
+  --text-color: #333;
+  --task-bg: #f9f9f9;
+  --border-color: #ddd;
+  --stats-bg: #f9f9f9;
+  --chart-bg: #f9f9f9;
+  --footer-bg: #848383;
+  --input-bg: white;
+  --shadow-color: rgba(0,0,0,0.1);
+  --completed-opacity: 0.6;
+}
+
+/* Mode sombre */
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --container-bg: #2d2d2d;
+  --text-color: #f0f0f0;
+  --task-bg: #3d3d3d;
+  --border-color: #444;
+  --stats-bg: #3d3d3d;
+  --chart-bg: #3d3d3d;
+  --footer-bg: #1e1e1e;
+  --input-bg: #3d3d3d;
+  --shadow-color: rgba(0,0,0,0.3);
+  --completed-opacity: 0.7;
+}
+
+/* ========== Styles de base ========== */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background: white;
+    background: var(--container-bg);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px var(--shadow-color);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    color: var(--text-color);
 }
 
+/* ========== Styles du formulaire ========== */
 #task-form {
     display: flex;
     gap: 10px;
@@ -28,8 +64,11 @@ h1 {
 
 #task-form input, #task-form select {
     padding: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    transition: all 0.3s ease;
 }
 
 #task-form input[type="text"] {
@@ -49,35 +88,14 @@ h1 {
     background: #4cae4c;
 }
 
-.controls {
-    margin-bottom: 20px;
-}
-
-#search-input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.sort-options {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.sort-options select {
-    padding: 5px;
-}
-
+/* ========== Styles des tâches ========== */
 #task-list {
     list-style: none;
     padding: 0;
 }
 
 #task-list li {
-    background: #f9f9f9;
+    background: var(--task-bg);
     margin-bottom: 8px;
     padding: 12px;
     border-radius: 4px;
@@ -113,7 +131,8 @@ h1 {
 
 .task-date {
     font-size: 0.8em;
-    color: #666;
+    color: var(--text-color);
+    opacity: 0.8;
     margin-right: 10px;
 }
 
@@ -171,7 +190,7 @@ h1 {
 }
 
 .completed {
-    opacity: 0.6;
+    opacity: var(--completed-opacity);
 }
 
 .completed .task-text {
@@ -180,24 +199,26 @@ h1 {
 
 .no-tasks {
     text-align: center;
-    color: #666;
+    color: var(--text-color);
+    opacity: 0.7;
     padding: 20px;
 }
 
-/* Dashboard Styles */
+/* ========== Dashboard ========== */
 .dashboard {
     margin-top: 30px;
     margin-bottom: 25px;
-    background: white;
+    background: var(--stats-bg);
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: all 0.3s ease;
 }
 
 .stats-card h3 {
     margin-top: 0;
-    color: #333;
-    border-bottom: 1px solid #eee;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 10px;
 }
 
@@ -212,7 +233,7 @@ h1 {
     text-align: center;
     padding: 10px;
     border-radius: 5px;
-    background: #f9f9f9;
+    background: var(--container-bg);
 }
 
 .stat-value {
@@ -231,13 +252,14 @@ h1 {
 
 .stat-label {
     font-size: 12px;
-    color: #666;
+    color: var(--text-color);
+    opacity: 0.7;
     text-transform: uppercase;
 }
 
 .progress-container {
     height: 10px;
-    background: #f0f0f0;
+    background: var(--task-bg);
     border-radius: 5px;
     margin: 15px 0;
     overflow: hidden;
@@ -250,7 +272,7 @@ h1 {
     transition: width 0.5s ease;
 }
 
-/* Styles pour les graphiques */
+/* ========== Graphiques ========== */
 .chart-container {
     display: flex;
     gap: 20px;
@@ -259,21 +281,63 @@ h1 {
 
 .chart-card {
     flex: 1;
-    background: #f9f9f9;
+    background: var(--chart-bg);
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: all 0.3s ease;
 }
 
 .chart-card h4 {
     margin-top: 0;
     text-align: center;
-    color: #555;
+    color: var(--text-color);
     margin-bottom: 10px;
 }
 
+/* ========== Footer ========== */
+.app-footer {
+    background-color: var(--footer-bg);
+    color: white;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-radius: 0 0 8px 8px;
+    transition: background-color 0.3s ease;
+}
 
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-left: 180px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+/* ========== Bouton de thème ========== */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--container-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    opacity: 0.9;
+}
+
+/* ========== Responsive ========== */
 @media (max-width: 768px) {
     .chart-container {
         flex-direction: column;
@@ -282,30 +346,17 @@ h1 {
     #task-form {
         flex-direction: column;
     }
-}
-/* Styles pour le footer */
-.app-footer {
-    background-color: #848383;
-    color: white;
-    padding: 20px 0;
-    margin-top: 30px;
-    border-radius: 0 0 8px 8px;
-}
-
-.footer-content {
-    max-width: 800px;
-    margin: 0 auto;
-    margin-left:  180px;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-@media (max-width: 600px) {
+    
     .footer-content {
+        margin-left: 0;
         flex-direction: column;
         text-align: center;
+    }
+    
+    .theme-toggle {
+        position: static;
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
     }
 }

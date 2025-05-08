@@ -27,13 +27,19 @@ Application web de gestion de tâches avec tableau de bord statistique et visual
 Aucune installation supplémentaire n'est requise.
 
 ## Structure du projet
+todo-app/
 ├── index.html
 ├── css/
-│ └── style.css
+│   └── style.css
 ├── js/
-│ ├── main.js
-│ └── storage.js
-└── README.md
+│   ├── storage.js         
+│   ├── taskRenderer.js    
+│   ├── dashboard.js       
+│   ├── taskManager.js     
+│   └── main.js           
+├── images/
+│   └── screenshot.png     
+└── README.md              
 
 ## Utilisation
 1. Ajoutez une tâche via le formulaire

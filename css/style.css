@@ -272,10 +272,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-canvas {
-    width: 100% !important;
-    height: 200px !important;
-}
+
 
 @media (max-width: 768px) {
     .chart-container {

@@ -1,7 +1,8 @@
 # Gestionnaire de Tâches
 TODO-APP
+
 ## Description
-Application web de gestion de tâches avec tableau de bord statistique et visualisation des données.
+Application web de gestion de tâches avec tableau de bord statistique, visualisation des données et citations motivantes.
 
 ## Fonctionnalités principales
 - Création de tâches avec texte, date et niveau de priorité
@@ -12,13 +13,15 @@ Application web de gestion de tâches avec tableau de bord statistique et visual
 - Tri des tâches par différents critères
 - Sauvegarde locale dans le navigateur
 - Interface adaptée aux mobiles
+- Citations aléatoires pour la motivation
 
 ## Technologies
 - HTML5
 - CSS3 (Flexbox, Grid)
-- JavaScript natif
+- JavaScript natif (ES6+)
 - Chart.js pour les graphiques
 - LocalStorage pour le stockage
+- API Quotable pour les citations
 
 ## Installation
 1. Téléchargez les fichiers du projet
@@ -38,7 +41,8 @@ todo-app/
 │   ├── taskManager.js     
 │   └── main.js           
 ├── images/
-│   └── screenshot.png     
+│   ├── screenshot.png     
+│   └── screenshot1.png    
 └── README.md              
 
 ## Utilisation
@@ -46,16 +50,23 @@ todo-app/
 2. Cliquez sur la case pour marquer une tâche comme terminée
 3. Utilisez les boutons de suppression pour supprimer des tâches
 4. Consultez les statistiques dans le tableau de bord
+5. Appuyez sur "Nouvelle citation" pour une dose de motivation
+
+## Fonctionnalité des citations
+- Affichage d'une citation aléatoire au chargement de la page
+- Bouton pour charger une nouvelle citation à la demande
+- Citations en anglais avec traduction automatique optionnelle
+- Cache des citations récentes pour éviter les répétitions
+- Mode hors-ligne avec citations par défaut
 
 ## Personnalisation
-Modifiez le fichier `style.css` pour changer :
-- Les couleurs principales
-- Les tailles des éléments
-- La disposition générale
+Modifiez les fichiers suivants pour personnaliser :
+- `style.css` : couleurs, tailles et disposition
+- `js/quotes.js` : sources des citations ou texte par défaut
 
 ## Aperçu
 ![Interface de l'application](/images/screenshot.png)
-
+![Interface de l'application](/images/screenshot1.png)
 
 ## Auteur
 Chairat Aymen - aymen.chairat@sesame.com.tn

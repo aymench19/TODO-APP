@@ -20,10 +20,10 @@ class TaskRenderer {
     }
 
     _filterTasks(tasks, searchTerm) {
-        return tasks.filter(task => 
-            task.text.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-    }
+    return tasks.filter(task => {
+        return task.text && task.text.toLowerCase().includes(searchTerm.toLowerCase());
+    });
+}
 
     _sortTasks(tasks, sortField, order) {
         return [...tasks].sort((a, b) => {

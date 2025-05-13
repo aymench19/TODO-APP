@@ -15,14 +15,12 @@ class ThemeManager {
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
         
-        // Mettre à jour le texte et l'icône du bouton
         const icon = theme === 'dark' ? '☀️' : '🌙';
         const text = theme === 'dark' ? 'Mode clair' : 'Mode sombre';
         
         this.themeToggle.querySelector('.icon').textContent = icon;
         this.themeToggle.querySelector('.text').textContent = text;
         
-        // Mettre à jour les graphiques si nécessaire
         if (window.dashboard) {
             window.dashboard.updateCharts();
         }

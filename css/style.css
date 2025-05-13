@@ -1,6 +1,6 @@
-/* ========== Variables CSS ========== */
+/*  Variables CSS  */
 :root {
-  /* Mode clair (défaut) */
+  /* Mode clair  */
   --bg-color: #f5f5f5;
   --container-bg: white;
   --text-color: #333;
@@ -29,7 +29,7 @@
   --completed-opacity: 0.7;
 }
 
-/* ========== Styles de base ========== */
+/*  Styles de base  */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -55,7 +55,7 @@ h1 {
     color: var(--text-color);
 }
 
-/* ========== Styles du formulaire ========== */
+/*  Styles du formulaire  */
 #task-form {
     display: flex;
     gap: 10px;
@@ -88,7 +88,7 @@ h1 {
     background: #4cae4c;
 }
 
-/* ========== Styles des tâches ========== */
+/*  Styles des tâches  */
 #task-list {
     list-style: none;
     padding: 0;
@@ -204,7 +204,7 @@ h1 {
     padding: 20px;
 }
 
-/* ========== Dashboard ========== */
+/*  Dashboard  */
 .dashboard {
     margin-top: 30px;
     margin-bottom: 25px;
@@ -272,7 +272,7 @@ h1 {
     transition: width 0.5s ease;
 }
 
-/* ========== Graphiques ========== */
+/*  Graphiques  */
 .chart-container {
     display: flex;
     gap: 20px;
@@ -295,7 +295,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* ========== Footer ========== */
+/*  Footer  */
 .app-footer {
     background-color: var(--footer-bg);
     color: white;
@@ -315,7 +315,7 @@ h1 {
     align-items: center;
 }
 
-/* ========== Bouton de thème ========== */
+/*  Bouton de thème  */
 .theme-toggle {
     position: fixed;
     top: 20px;
@@ -337,7 +337,7 @@ h1 {
     opacity: 0.9;
 }
 
-/* ========== Responsive ========== */
+/* Responsive  */
 @media (max-width: 768px) {
     .chart-container {
         flex-direction: column;

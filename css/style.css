@@ -363,18 +363,20 @@ h1 {
 .quote-container {
     margin: 20px 0;
     padding: 15px;
-    background-color: #f8f9fa;
+    background-color: var(--task-bg);
     border-radius: 5px;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 #motivational-quote {
     font-style: italic;
     margin: 10px 0;
+    color: var(--text-color);
 }
 
 #new-quote-btn {
-    background-color: #4CAF50;
+    background-color: #5cb85c;
     color: white;
     border: none;
     padding: 8px 16px;
@@ -384,5 +386,9 @@ h1 {
 }
 
 #new-quote-btn:hover {
-    background-color: #45a049;
+    background-color: #4cae4c;
+}
+
+.loading {
+    color: var(--text-color);
 }

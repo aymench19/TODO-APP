@@ -18,7 +18,6 @@ class TaskManager {
         this.sortBy = document.getElementById('sort-by');
         this.sortOrder = document.getElementById('sort-order');
         
-        // Set default date to today
         this.taskDate.value = new Date().toISOString().split('T')[0];
     }
 
